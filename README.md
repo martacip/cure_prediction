@@ -1,16 +1,19 @@
-# Dynamic prediction in mixture cure models
-This repository aims to make the results from "Dynamic Prediction in Mixture Cure Models: A Model-Based Landmarking Approach" reproducible. There are two directories, with R_Simulations showing the code for the simulation study and R_Analysis showing the code used to obtain results for "renal" dataset.
+# Dynamic Prediction in Mixture Cure Models
+This repository contains the code and material to reproduce the results of the paper:
+"Dynamic Prediction in Mixture Cure Models: A Model-Based Landmarking Approach"
 
-The two subdirectories are described in more detail below.
+The project is organized into two main directories:
+
+- R_Simulations: code for the simulation study
+- R_Analysis: code for the analysis of the renal dataset
+
 
 # R_Simulations
-In this directory, the code used to perform the simulation studies can be found. There are the following files:
-- "imputation_cure_similation" is the main code reproducing the algorithm
-- "imputation_cure_similation_4" is the adjusted algorithm code for Scenario D
-- "functions" contains all the necessary functions
-- "functions_4" contains the customized functions for Scenario D
-- "parameters" is the file from which to select the parameters set for each scenario.
+This directory includes all the code used to run the simulation studies. The key files are:
+- functions.R —> contains all the necessary functions and the main implementation of the method described in Section 3 of the paper.
+- parameters.R —> defines the parameter settings for each simulation scenario.
+- simulation.R —> script for running the simulations in parallel, making use of the functions defined in functions.R.
 
 
 # R_Analysis
-In this directory is contained the code which was used to perform analyses on the "renal" dataset from the joinRML R package. 
+This directory contains the code used to analyze the \texttt{renal} dataset, available in the \texttt{joinRML} R package. 
